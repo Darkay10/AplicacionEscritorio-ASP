@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_login = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button_registro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // button_login
             // 
-            this.button1.Location = new System.Drawing.Point(345, 256);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 61);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_login.Location = new System.Drawing.Point(209, 256);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(146, 61);
+            this.button_login.TabIndex = 0;
+            this.button_login.Text = "login";
+            this.button_login.UseVisualStyleBackColor = true;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // textBox1
             // 
@@ -77,16 +78,27 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "pass";
             // 
+            // button_registro
+            // 
+            this.button_registro.Location = new System.Drawing.Point(456, 256);
+            this.button_registro.Name = "button_registro";
+            this.button_registro.Size = new System.Drawing.Size(156, 59);
+            this.button_registro.TabIndex = 5;
+            this.button_registro.Text = "Registro";
+            this.button_registro.UseVisualStyleBackColor = true;
+            this.button_registro.Click += new System.EventHandler(this.button_registro_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_registro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_login);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
@@ -96,10 +108,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_login;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button_registro;
     }
 }

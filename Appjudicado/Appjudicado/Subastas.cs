@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Appjudicado
 {
-    public partial class Login : Form
+    public partial class Subastas : Form
     {
-        public Login()
+        public Subastas()
         {
             InitializeComponent();
-        }
-
-        private void button_login_Click(object sender, EventArgs e)
-        {
-            //login
-        }
-
-        private void button_registro_Click(object sender, EventArgs e)
-        {
-            //open registro
         }
     }
 }
