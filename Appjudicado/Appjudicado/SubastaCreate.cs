@@ -24,7 +24,7 @@ namespace Appjudicado
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-
+            textbox_imagen.Text = openimagen.FileName;
         }
 
         private void button_openfile_Click(object sender, EventArgs e)

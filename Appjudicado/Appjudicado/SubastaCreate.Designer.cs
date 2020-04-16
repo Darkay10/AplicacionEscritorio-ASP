@@ -40,6 +40,7 @@
             this.openimagen = new System.Windows.Forms.OpenFileDialog();
             this.label5 = new System.Windows.Forms.Label();
             this.button_openfile = new System.Windows.Forms.Button();
+            this.textbox_imagen = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -138,19 +139,28 @@
             // 
             // button_openfile
             // 
-            this.button_openfile.Location = new System.Drawing.Point(422, 283);
+            this.button_openfile.Location = new System.Drawing.Point(534, 282);
             this.button_openfile.Name = "button_openfile";
             this.button_openfile.Size = new System.Drawing.Size(75, 23);
             this.button_openfile.TabIndex = 10;
-            this.button_openfile.Text = "button1";
+            this.button_openfile.Text = "Elegir...";
             this.button_openfile.UseVisualStyleBackColor = true;
             this.button_openfile.Click += new System.EventHandler(this.button_openfile_Click);
+            // 
+            // textbox_imagen
+            // 
+            this.textbox_imagen.Enabled = false;
+            this.textbox_imagen.Location = new System.Drawing.Point(398, 282);
+            this.textbox_imagen.Name = "textbox_imagen";
+            this.textbox_imagen.Size = new System.Drawing.Size(100, 20);
+            this.textbox_imagen.TabIndex = 11;
             // 
             // SubastaCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textbox_imagen);
             this.Controls.Add(this.button_openfile);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.listbox_duracion);
@@ -184,5 +194,6 @@
         private System.Windows.Forms.OpenFileDialog openimagen;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button_openfile;
+        private System.Windows.Forms.TextBox textbox_imagen;
     }
 }
