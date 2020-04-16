@@ -21,5 +21,15 @@ namespace Appjudicado
         {
 
         }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button_openfile_Click(object sender, EventArgs e)
+        {
+            openimagen.ShowDialog();
+        }
     }
 }
