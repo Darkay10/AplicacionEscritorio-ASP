@@ -14,7 +14,6 @@ namespace Appjudicado
 
         public static async void GetUsersAsync()
         {
-            
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("http://192.168.0.21:45081/api/%22");
