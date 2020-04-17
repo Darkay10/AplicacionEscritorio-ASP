@@ -17,6 +17,7 @@ namespace Appjudicado
         private string cp;
         private string pais;
         private int rol;
+        private bool habilitado;
 
         public Usuario(string id, string user, string pass, string email, string direccion, string localidad, string cp, string pais, int rol)
         {
@@ -29,6 +30,7 @@ namespace Appjudicado
             this.cp = cp;
             this.pais = pais;
             this.rol = rol;
+            this.Habilitado = true;
         }
 
         public Usuario(string id)
@@ -42,6 +44,7 @@ namespace Appjudicado
             this.cp = "";
             this.pais = "";
             this.rol = 0;
+            this.Habilitado = true;
         }
 
         public string Id { get => id; set => id = value; }
@@ -53,5 +56,6 @@ namespace Appjudicado
         public string Cp { get => cp; set => cp = value; }
         public string Pais { get => pais; set => pais = value; }
         public int Rol { get => rol; set => rol = value; }
+        public bool Habilitado { get => habilitado; set => habilitado = value; }
     }
 }
