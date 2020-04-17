@@ -16,5 +16,11 @@ namespace Appjudicado
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ConexionApi.GetUsersAsync();
+            textBox1.Text = ConexionApi.users[0].User;
+        }
     }
 }

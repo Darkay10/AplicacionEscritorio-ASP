@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Appjudicado
 {
-    class Usuario
+    public class Usuario
     {
-        private string id;
+        private int id;
         private string user;
         private string pass;
         private string email;
@@ -19,7 +19,7 @@ namespace Appjudicado
         private int rol;
         private bool habilitado;
 
-        public Usuario(string id, string user, string pass, string email, string direccion, string localidad, string cp, string pais, int rol)
+        public Usuario(int id, string user, string pass, string email, string direccion, string localidad, string cp, string pais, int rol)
         {
             this.id = id;
             this.user = user;
@@ -33,7 +33,7 @@ namespace Appjudicado
             this.Habilitado = true;
         }
 
-        public Usuario(string id)
+        public Usuario(int id)
         {
             this.id = id;
             this.user = "";
@@ -47,7 +47,7 @@ namespace Appjudicado
             this.Habilitado = true;
         }
 
-        public string Id { get => id; set => id = value; }
+        public int Id { get => id; set => id = value; }
         public string User { get => user; set => user = value; }
         public string Pass { get => pass; set => pass = value; }
         public string Email { get => email; set => email = value; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Appjudicado
 {
-    class Subasta
+    public class Subasta
     {
         private string id;
         private string articulo;

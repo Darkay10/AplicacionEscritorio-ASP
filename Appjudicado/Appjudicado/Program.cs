@@ -16,7 +16,7 @@ namespace Appjudicado
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SubastaCreate());
+            Application.Run(new Main());
         }
     }
 }
