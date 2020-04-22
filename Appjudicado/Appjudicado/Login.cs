@@ -35,6 +35,7 @@ namespace Appjudicado
         private void button_registro_Click(object sender, EventArgs e)
         {
             //open registro
+            Application.Run(new Registro());
         }
     }
 }
