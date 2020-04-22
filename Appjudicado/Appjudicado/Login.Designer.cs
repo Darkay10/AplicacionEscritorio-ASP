@@ -38,51 +38,55 @@
             // 
             // button_login
             // 
-            this.button_login.Location = new System.Drawing.Point(209, 256);
+            this.button_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button_login.Location = new System.Drawing.Point(284, 244);
             this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(146, 61);
+            this.button_login.Size = new System.Drawing.Size(111, 59);
             this.button_login.TabIndex = 0;
-            this.button_login.Text = "login";
+            this.button_login.Text = "Login";
             this.button_login.UseVisualStyleBackColor = true;
             this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(361, 120);
+            this.textBox1.Location = new System.Drawing.Point(394, 121);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(137, 20);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(361, 171);
+            this.textBox2.Location = new System.Drawing.Point(394, 171);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(137, 20);
             this.textBox2.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(275, 126);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(281, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "user";
+            this.label1.Text = "Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(278, 177);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(281, 172);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 4;
-            this.label2.Text = "pass";
+            this.label2.Text = "Contraseña";
             // 
             // button_registro
             // 
-            this.button_registro.Location = new System.Drawing.Point(456, 256);
+            this.button_registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button_registro.Location = new System.Drawing.Point(420, 244);
             this.button_registro.Name = "button_registro";
-            this.button_registro.Size = new System.Drawing.Size(156, 59);
+            this.button_registro.Size = new System.Drawing.Size(111, 59);
             this.button_registro.TabIndex = 5;
             this.button_registro.Text = "Registro";
             this.button_registro.UseVisualStyleBackColor = true;
