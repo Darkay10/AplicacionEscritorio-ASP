@@ -65,6 +65,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModeloUsuarios.cs" />
     <Compile Include="PanelAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +81,7 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sesion.cs" />
     <Compile Include="Subasta.cs" />
     <Compile Include="SubastaCreate.cs">
       <SubType>Form</SubType>

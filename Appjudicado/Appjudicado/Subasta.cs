@@ -20,7 +20,7 @@ namespace Appjudicado
         private string desripcion;
         private string categoria;
 
-        public Subasta(string id, string articulo, float precio, Usuario vendedor, DateTime fin, DateTime comienzo, 
+        /*public Subasta(string id, string articulo, float precio, Usuario vendedor, DateTime fin, DateTime comienzo, 
             string imagen, string desripcion, string categoria)
         {
             this.Id = id;
@@ -49,7 +49,7 @@ namespace Appjudicado
             this.Imagen = "";
             this.Desripcion = "";
             this.Categoria = "";
-        }
+        }*/
 
         public string Id { get => id; set => id = value; }
         public string Articulo { get => articulo; set => articulo = value; }

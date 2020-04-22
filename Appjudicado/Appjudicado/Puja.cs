@@ -8,22 +8,27 @@ namespace Appjudicado
 {
     public class Puja
     {
-        private Subasta subasta;
-        private Usuario pujador;
+        private int subasta;
+        private int pujador;
         private float cantidad;
-        private DateTime fecha;
+        private DateTime tiempo;
 
-        public Puja(Subasta subasta, Usuario pujador, float cantidad, DateTime fecha)
+        public Puja(int subasta, int pujador, float cantidad, DateTime tiempo)
+        {
+            this.subasta = subasta;
+            this.pujador = pujador;
+            this.cantidad = cantidad;
+            this.tiempo = tiempo;
+        }
+
+        /*public Puja(Subasta subasta, Usuario pujador, float cantidad, DateTime fecha)
         {
             this.Subasta = subasta;
             this.Pujador = pujador;
             this.Cantidad = cantidad;
             this.Fecha = fecha;
-        }
+        }*/
 
-        public float Cantidad { get => cantidad; set => cantidad = value; }
-        public DateTime Fecha { get => fecha; set => fecha = value; }
-        internal Subasta Subasta { get => subasta; set => subasta = value; }
-        internal Usuario Pujador { get => pujador; set => pujador = value; }
+
     }
 }

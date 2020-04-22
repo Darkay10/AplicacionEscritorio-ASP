@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.button_login = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.user_tb = new System.Windows.Forms.TextBox();
+            this.pass_tb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button_registro = new System.Windows.Forms.Button();
@@ -47,19 +47,19 @@
             this.button_login.UseVisualStyleBackColor = true;
             this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
-            // textBox1
+            // user_tb
             // 
-            this.textBox1.Location = new System.Drawing.Point(394, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 1;
+            this.user_tb.Location = new System.Drawing.Point(394, 121);
+            this.user_tb.Name = "user_tb";
+            this.user_tb.Size = new System.Drawing.Size(137, 20);
+            this.user_tb.TabIndex = 1;
             // 
-            // textBox2
+            // pass_tb
             // 
-            this.textBox2.Location = new System.Drawing.Point(394, 171);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(137, 20);
-            this.textBox2.TabIndex = 2;
+            this.pass_tb.Location = new System.Drawing.Point(394, 171);
+            this.pass_tb.Name = "pass_tb";
+            this.pass_tb.Size = new System.Drawing.Size(137, 20);
+            this.pass_tb.TabIndex = 2;
             // 
             // label1
             // 
@@ -100,8 +100,8 @@
             this.Controls.Add(this.button_registro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pass_tb);
+            this.Controls.Add(this.user_tb);
             this.Controls.Add(this.button_login);
             this.Name = "Login";
             this.Text = "Login";
@@ -113,8 +113,8 @@
         #endregion
 
         private System.Windows.Forms.Button button_login;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox user_tb;
+        private System.Windows.Forms.TextBox pass_tb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_registro;

@@ -19,7 +19,7 @@ namespace Appjudicado
         private int rol;
         private bool habilitado;
 
-        public Usuario(int id, string user, string pass, string email, string direccion, string localidad, string cp, string pais, int rol, bool hab)
+        /*public Usuario(int id, string user, string pass, string email, string direccion, string localidad, string cp, string pais, int rol, bool hab)
         {
             this.id = id;
             this.user = user;
@@ -45,7 +45,7 @@ namespace Appjudicado
             this.pais = "";
             this.rol = 0;
             this.Habilitado = true;
-        }
+        }*/
 
         public int Id { get => id; set => id = value; }
         public string User { get => user; set => user = value; }
