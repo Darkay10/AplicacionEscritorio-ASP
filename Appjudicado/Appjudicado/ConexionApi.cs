@@ -23,7 +23,7 @@ namespace Appjudicado
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Usuario");
+                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Usuario/GetAllUsuarios/");
                 var respuesta = client.GetAsync("Usuario");
                 respuesta.Wait();
 
@@ -47,7 +47,7 @@ namespace Appjudicado
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Usuario");
+                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Usuario/GetUsuario/");
                 var respuesta = client.GetAsync("Usuario/"+id);
                 respuesta.Wait();
 
@@ -64,6 +64,25 @@ namespace Appjudicado
                         user=usuario;
                     }
                 }
+            }
+        }
+        public static bool RegistrarUser(string nick, string p, string e, string d, string l, string pais, string cod)
+        {
+            using (var client = new HttpClient())
+            {
+                bool res = false;
+                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Usuario/InsertUsuario/");
+                var respuesta = client.GetAsync(string.Format("?u={0}&p={1}&e={2}&d={3}&l={4}&pais={5}&cod={6}", nick, p, e, d, l, pais, cod));
+                respuesta.Wait();
+
+                var response = respuesta.Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var lectura = response.Content.ReadAsAsync<Boolean>();
+                    lectura.Wait();
+                    res = lectura.Result;
+                }
+                return res;
             }
         }
     }

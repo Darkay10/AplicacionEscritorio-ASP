@@ -26,16 +26,14 @@ namespace Appjudicado
             {
                 this.Close();
             }
-            else
-            {
-                MessageBox.Show("Error", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            else { MessageBox.Show("Error", "error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void button_registro_Click(object sender, EventArgs e)
         {
             //open registro
-            Application.Run(new Registro());
+            Registro r = new Registro();
+            r.Show();
         }
     }
 }
