@@ -12,7 +12,6 @@ namespace Appjudicado
 
         public static List<Usuario> users;
         public static Usuario user;
-
         public static void start()
         {
             users = new List<Usuario>();
@@ -32,7 +31,6 @@ namespace Appjudicado
                 {
                     var lectura = response.Content.ReadAsAsync<Usuario[]>();
                     lectura.Wait();
-
                     var usuarios = lectura.Result;
                     
                     foreach (var usuario in usuarios)
@@ -66,6 +64,7 @@ namespace Appjudicado
                 }
             }
         }
+
         public static bool RegistrarUser(string nick, string p, string e, string d, string l, string pais, string cod)
         {
             using (var client = new HttpClient())

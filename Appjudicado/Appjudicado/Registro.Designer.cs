@@ -50,7 +50,7 @@
             this.bRegistro.Location = new System.Drawing.Point(270, 359);
             this.bRegistro.Name = "bRegistro";
             this.bRegistro.Size = new System.Drawing.Size(194, 57);
-            this.bRegistro.TabIndex = 0;
+            this.bRegistro.TabIndex = 8;
             this.bRegistro.Text = "REGISTRARSE";
             this.bRegistro.UseVisualStyleBackColor = true;
             this.bRegistro.Click += new System.EventHandler(this.bRegistro_Click);
@@ -76,7 +76,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(212, 191);
+            this.label3.Location = new System.Drawing.Point(212, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 3;
@@ -85,7 +85,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(184, 232);
+            this.label4.Location = new System.Drawing.Point(184, 221);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 4;
@@ -94,7 +94,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(211, 271);
+            this.label5.Location = new System.Drawing.Point(211, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 5;
@@ -114,54 +114,54 @@
             this.textbox_user.Location = new System.Drawing.Point(364, 44);
             this.textbox_user.Name = "textbox_user";
             this.textbox_user.Size = new System.Drawing.Size(100, 20);
-            this.textbox_user.TabIndex = 7;
+            this.textbox_user.TabIndex = 1;
             // 
             // textbox_pass
             // 
             this.textbox_pass.Location = new System.Drawing.Point(364, 85);
             this.textbox_pass.Name = "textbox_pass";
             this.textbox_pass.Size = new System.Drawing.Size(100, 20);
-            this.textbox_pass.TabIndex = 8;
+            this.textbox_pass.TabIndex = 2;
             // 
             // textbox_direccion
             // 
-            this.textbox_direccion.Location = new System.Drawing.Point(364, 184);
+            this.textbox_direccion.Location = new System.Drawing.Point(364, 166);
             this.textbox_direccion.Name = "textbox_direccion";
             this.textbox_direccion.Size = new System.Drawing.Size(100, 20);
-            this.textbox_direccion.TabIndex = 9;
+            this.textbox_direccion.TabIndex = 4;
             // 
             // textbox_codigo_postal
             // 
-            this.textbox_codigo_postal.Location = new System.Drawing.Point(364, 225);
+            this.textbox_codigo_postal.Location = new System.Drawing.Point(364, 214);
             this.textbox_codigo_postal.Name = "textbox_codigo_postal";
             this.textbox_codigo_postal.Size = new System.Drawing.Size(100, 20);
-            this.textbox_codigo_postal.TabIndex = 10;
+            this.textbox_codigo_postal.TabIndex = 5;
             // 
             // textbox_localidad
             // 
-            this.textbox_localidad.Location = new System.Drawing.Point(364, 264);
+            this.textbox_localidad.Location = new System.Drawing.Point(364, 260);
             this.textbox_localidad.Name = "textbox_localidad";
             this.textbox_localidad.Size = new System.Drawing.Size(100, 20);
-            this.textbox_localidad.TabIndex = 11;
+            this.textbox_localidad.TabIndex = 6;
             // 
             // textbox_pais
             // 
             this.textbox_pais.Location = new System.Drawing.Point(364, 304);
             this.textbox_pais.Name = "textbox_pais";
             this.textbox_pais.Size = new System.Drawing.Size(100, 20);
-            this.textbox_pais.TabIndex = 12;
+            this.textbox_pais.TabIndex = 7;
             // 
             // textbox_email
             // 
-            this.textbox_email.Location = new System.Drawing.Point(364, 134);
+            this.textbox_email.Location = new System.Drawing.Point(364, 125);
             this.textbox_email.Name = "textbox_email";
             this.textbox_email.Size = new System.Drawing.Size(100, 20);
-            this.textbox_email.TabIndex = 14;
+            this.textbox_email.TabIndex = 3;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(239, 141);
+            this.label7.Location = new System.Drawing.Point(239, 132);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 13;

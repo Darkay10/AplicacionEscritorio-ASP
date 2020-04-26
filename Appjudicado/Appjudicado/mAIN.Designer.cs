@@ -28,81 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_crear = new System.Windows.Forms.Button();
-            this.button_subastas_lista = new System.Windows.Forms.Button();
-            this.button_perfil = new System.Windows.Forms.Button();
+            this.bCrear = new System.Windows.Forms.Button();
+            this.bListar = new System.Windows.Forms.Button();
+            this.bPerfil = new System.Windows.Forms.Button();
+            this.bAdmin = new System.Windows.Forms.Button();
+            this.lTexto = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button_crear
+            // bCrear
             // 
-            this.button_crear.Location = new System.Drawing.Point(213, 124);
-            this.button_crear.Name = "button_crear";
-            this.button_crear.Size = new System.Drawing.Size(145, 23);
-            this.button_crear.TabIndex = 0;
-            this.button_crear.Text = "CREAR SUBASTA";
-            this.button_crear.UseVisualStyleBackColor = true;
+            this.bCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.bCrear.Location = new System.Drawing.Point(12, 74);
+            this.bCrear.Name = "bCrear";
+            this.bCrear.Size = new System.Drawing.Size(99, 58);
+            this.bCrear.TabIndex = 0;
+            this.bCrear.Text = "Crear subasta";
+            this.bCrear.UseVisualStyleBackColor = true;
             // 
-            // button_subastas_lista
+            // bListar
             // 
-            this.button_subastas_lista.Location = new System.Drawing.Point(213, 187);
-            this.button_subastas_lista.Name = "button_subastas_lista";
-            this.button_subastas_lista.Size = new System.Drawing.Size(145, 23);
-            this.button_subastas_lista.TabIndex = 1;
-            this.button_subastas_lista.Text = "lista subastas";
-            this.button_subastas_lista.UseVisualStyleBackColor = true;
+            this.bListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.bListar.Location = new System.Drawing.Point(12, 138);
+            this.bListar.Name = "bListar";
+            this.bListar.Size = new System.Drawing.Size(99, 57);
+            this.bListar.TabIndex = 1;
+            this.bListar.Text = "Ver subastas";
+            this.bListar.UseVisualStyleBackColor = true;
             // 
-            // button_perfil
+            // bPerfil
             // 
-            this.button_perfil.Location = new System.Drawing.Point(665, 22);
-            this.button_perfil.Name = "button_perfil";
-            this.button_perfil.Size = new System.Drawing.Size(75, 23);
-            this.button_perfil.TabIndex = 2;
-            this.button_perfil.Text = "Usuario";
-            this.button_perfil.UseVisualStyleBackColor = true;
+            this.bPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.bPerfil.Location = new System.Drawing.Point(12, 11);
+            this.bPerfil.Name = "bPerfil";
+            this.bPerfil.Size = new System.Drawing.Size(99, 57);
+            this.bPerfil.TabIndex = 2;
+            this.bPerfil.Text = "Perfil";
+            this.bPerfil.UseVisualStyleBackColor = true;
+            // 
+            // bAdmin
+            // 
+            this.bAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.bAdmin.Location = new System.Drawing.Point(11, 264);
+            this.bAdmin.Name = "bAdmin";
+            this.bAdmin.Size = new System.Drawing.Size(100, 57);
+            this.bAdmin.TabIndex = 3;
+            this.bAdmin.Text = "Administrar usuarios";
+            this.bAdmin.UseVisualStyleBackColor = true;
+            // 
+            // lTexto
+            // 
+            this.lTexto.AutoSize = true;
+            this.lTexto.Location = new System.Drawing.Point(12, 391);
+            this.lTexto.Name = "lTexto";
+            this.lTexto.Size = new System.Drawing.Size(30, 13);
+            this.lTexto.TabIndex = 4;
+            this.lTexto.Text = "texto";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(624, 308);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Location = new System.Drawing.Point(11, 201);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 57);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Mis subastas";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(472, 308);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 4;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(614, 225);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button_perfil);
-            this.Controls.Add(this.button_subastas_lista);
-            this.Controls.Add(this.button_crear);
+            this.Controls.Add(this.lTexto);
+            this.Controls.Add(this.bAdmin);
+            this.Controls.Add(this.bPerfil);
+            this.Controls.Add(this.bListar);
+            this.Controls.Add(this.bCrear);
             this.Name = "Main";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,12 +116,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button_crear;
-        private System.Windows.Forms.Button button_subastas_lista;
-        private System.Windows.Forms.Button button_perfil;
+        private System.Windows.Forms.Button bCrear;
+        private System.Windows.Forms.Button bListar;
+        private System.Windows.Forms.Button bPerfil;
+        private System.Windows.Forms.Button bAdmin;
+        private System.Windows.Forms.Label lTexto;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -26,6 +26,7 @@ namespace Appjudicado
                 {
                     logged = u;
                     log = true;
+                    Main.text.Text = "Bienvenido, " + u.User + u.Rol + u.Pass + u.Localidad + u.Id + u.Cp + u.Direccion + u.Email;
                 }
             }
             return log;
@@ -38,7 +39,7 @@ namespace Appjudicado
             ConexionApi.GetUsersAsync();
             foreach (Usuario u in ConexionApi.users)
             {
-                if (u.User.Equals(nick))
+                if (u.User.Equals(nick))    // ERROR SI EL NICK EXISTE
                 {
                     logged = u;
                     reg = 1;
@@ -47,6 +48,10 @@ namespace Appjudicado
             if (reg == 0)
             {
                 bool res = ConexionApi.RegistrarUser(nick, p, e, d, l, pais, cod);
+                if (res)    // SE HA INSERTADO CORRECTAMENTE
+                    reg = 0;
+                else        // HEMOS TENIDO UN ERROR AL INSERTAR
+                    reg = 2;
             }
             return reg;
         }

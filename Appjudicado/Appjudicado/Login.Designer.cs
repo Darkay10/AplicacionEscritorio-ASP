@@ -42,7 +42,7 @@
             this.button_login.Location = new System.Drawing.Point(284, 244);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(111, 59);
-            this.button_login.TabIndex = 0;
+            this.button_login.TabIndex = 3;
             this.button_login.Text = "Login";
             this.button_login.UseVisualStyleBackColor = true;
             this.button_login.Click += new System.EventHandler(this.button_login_Click);
@@ -87,7 +87,7 @@
             this.button_registro.Location = new System.Drawing.Point(420, 244);
             this.button_registro.Name = "button_registro";
             this.button_registro.Size = new System.Drawing.Size(111, 59);
-            this.button_registro.TabIndex = 5;
+            this.button_registro.TabIndex = 4;
             this.button_registro.Text = "Registro";
             this.button_registro.UseVisualStyleBackColor = true;
             this.button_registro.Click += new System.EventHandler(this.button_registro_Click);
