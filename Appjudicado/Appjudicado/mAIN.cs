@@ -14,12 +14,14 @@ namespace Appjudicado
     {
         public static Label text;
         public static Button botonAdm;
+        public static FlowLayoutPanel panel;
         public Main()
         {
             InitializeComponent();
             ConexionApi.start();
             text = lTexto;
             botonAdm = bAdmin;
+            panel = panelDeControl;
         }
 
         private void Main_Load(object sender, EventArgs e)

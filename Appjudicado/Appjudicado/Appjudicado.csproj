@@ -66,12 +66,6 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="ModeloUsuarios.cs" />
-    <Compile Include="PanelAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PanelAdmin.Designer.cs">
-      <DependentUpon>PanelAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Puja.cs" />
@@ -83,27 +77,42 @@
     </Compile>
     <Compile Include="Sesion.cs" />
     <Compile Include="Subasta.cs" />
-    <Compile Include="SubastaCreate.cs">
-      <SubType>Form</SubType>
+    <Compile Include="ListadoUsuarios.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SubastaCreate.Designer.cs">
-      <DependentUpon>SubastaCreate.cs</DependentUpon>
+    <Compile Include="ListadoUsuarios.Designer.cs">
+      <DependentUpon>ListadoUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Subastas.cs">
-      <SubType>Form</SubType>
+    <Compile Include="ListadoSubastas.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Subastas.Designer.cs">
-      <DependentUpon>Subastas.cs</DependentUpon>
+    <Compile Include="ListadoSubastas.Designer.cs">
+      <DependentUpon>ListadoSubastas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelSubasta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelSubasta.Designer.cs">
+      <DependentUpon>PanelSubasta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelUsuario.Designer.cs">
+      <DependentUpon>PanelUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="ListadoSubastas.resx">
+      <DependentUpon>ListadoSubastas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoUsuarios.resx">
+      <DependentUpon>ListadoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mAIN.resx">
       <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PanelAdmin.resx">
-      <DependentUpon>PanelAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,8 +126,11 @@
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubastaCreate.resx">
-      <DependentUpon>SubastaCreate.cs</DependentUpon>
+    <EmbeddedResource Include="PanelSubasta.resx">
+      <DependentUpon>PanelSubasta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelUsuario.resx">
+      <DependentUpon>PanelUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

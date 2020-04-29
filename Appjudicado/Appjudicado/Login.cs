@@ -13,11 +13,6 @@ namespace Appjudicado
     public partial class Login : Form
     {
         public Main principal;
-        public Login()
-        {
-            InitializeComponent();
-            Sesion.blank();
-        }
 
         public Login(Main m)
         {
@@ -26,9 +21,8 @@ namespace Appjudicado
             Sesion.blank();
         }
 
-        private void button_login_Click(object sender, EventArgs e)
+        private void button_login_Click(object sender, EventArgs e)     // Login - Comprueba que exista, sino lanza un mensaje de error
         {
-            // Login
             bool t = Sesion.login(user_tb.Text, pass_tb.Text);
             if (t)
             {
@@ -38,9 +32,8 @@ namespace Appjudicado
             else { MessageBox.Show("Error, no existe el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
-        private void button_registro_Click(object sender, EventArgs e)
+        private void button_registro_Click(object sender, EventArgs e)  // Abrir pestaña de registro
         {
-            // Abrir pestaña de registro
             Registro r = new Registro();
             r.Show();
         }

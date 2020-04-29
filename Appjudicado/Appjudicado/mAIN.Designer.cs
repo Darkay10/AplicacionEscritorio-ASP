@@ -34,6 +34,7 @@
             this.bAdmin = new System.Windows.Forms.Button();
             this.lTexto = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.panelDeControl = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // bCrear
@@ -95,11 +96,19 @@
             this.button1.Text = "Mis subastas";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // panelDeControl
+            // 
+            this.panelDeControl.Location = new System.Drawing.Point(120, 5);
+            this.panelDeControl.Name = "panelDeControl";
+            this.panelDeControl.Size = new System.Drawing.Size(680, 450);
+            this.panelDeControl.TabIndex = 6;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(804, 461);
+            this.Controls.Add(this.panelDeControl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lTexto);
             this.Controls.Add(this.bAdmin);
@@ -122,6 +131,7 @@
         private System.Windows.Forms.Button bAdmin;
         private System.Windows.Forms.Label lTexto;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel panelDeControl;
     }
 }
 
