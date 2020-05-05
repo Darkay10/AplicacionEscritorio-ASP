@@ -28,102 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoSubastas));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lArticulo = new System.Windows.Forms.Label();
+            this.lCategoria = new System.Windows.Forms.Label();
+            this.lDescripcion = new System.Windows.Forms.Label();
+            this.lPrecio = new System.Windows.Forms.Label();
+            this.lFechaFin = new System.Windows.Forms.Label();
+            this.bDelPuja = new System.Windows.Forms.Button();
+            this.bVer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(18, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 108);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // lArticulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(177, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Articulo";
+            this.lArticulo.AutoSize = true;
+            this.lArticulo.Location = new System.Drawing.Point(177, 23);
+            this.lArticulo.Name = "lArticulo";
+            this.lArticulo.Size = new System.Drawing.Size(42, 13);
+            this.lArticulo.TabIndex = 1;
+            this.lArticulo.Text = "Articulo";
             // 
-            // label2
+            // lCategoria
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Categoria";
+            this.lCategoria.AutoSize = true;
+            this.lCategoria.Location = new System.Drawing.Point(177, 66);
+            this.lCategoria.Name = "lCategoria";
+            this.lCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lCategoria.TabIndex = 2;
+            this.lCategoria.Text = "Categoria";
             // 
-            // label3
+            // lDescripcion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(351, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Descripcion";
+            this.lDescripcion.AutoSize = true;
+            this.lDescripcion.Location = new System.Drawing.Point(351, 23);
+            this.lDescripcion.Name = "lDescripcion";
+            this.lDescripcion.Size = new System.Drawing.Size(63, 13);
+            this.lDescripcion.TabIndex = 3;
+            this.lDescripcion.Text = "Descripcion";
             // 
-            // label4
+            // lPrecio
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(351, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Precio";
+            this.lPrecio.AutoSize = true;
+            this.lPrecio.Location = new System.Drawing.Point(351, 108);
+            this.lPrecio.Name = "lPrecio";
+            this.lPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lPrecio.TabIndex = 4;
+            this.lPrecio.Text = "Precio";
             // 
-            // label5
+            // lFechaFin
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(177, 108);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Fecha fin";
+            this.lFechaFin.AutoSize = true;
+            this.lFechaFin.Location = new System.Drawing.Point(177, 108);
+            this.lFechaFin.Name = "lFechaFin";
+            this.lFechaFin.Size = new System.Drawing.Size(51, 13);
+            this.lFechaFin.TabIndex = 5;
+            this.lFechaFin.Text = "Fecha fin";
             // 
-            // button2
+            // bDelPuja
             // 
-            this.button2.Location = new System.Drawing.Point(588, 108);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bDelPuja.Location = new System.Drawing.Point(588, 105);
+            this.bDelPuja.Name = "bDelPuja";
+            this.bDelPuja.Size = new System.Drawing.Size(75, 39);
+            this.bDelPuja.TabIndex = 8;
+            this.bDelPuja.Text = "Pujar o eliminar";
+            this.bDelPuja.UseVisualStyleBackColor = true;
+            this.bDelPuja.Click += new System.EventHandler(this.bDelPuja_Click);
             // 
-            // button1
+            // bVer
             // 
-            this.button1.Location = new System.Drawing.Point(588, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Pujar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bVer.Location = new System.Drawing.Point(588, 66);
+            this.bVer.Name = "bVer";
+            this.bVer.Size = new System.Drawing.Size(75, 39);
+            this.bVer.TabIndex = 9;
+            this.bVer.Text = "Ver";
+            this.bVer.UseVisualStyleBackColor = true;
+            this.bVer.Click += new System.EventHandler(this.bVer_Click);
             // 
             // ListadoSubastas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.bVer);
+            this.Controls.Add(this.bDelPuja);
+            this.Controls.Add(this.lFechaFin);
+            this.Controls.Add(this.lPrecio);
+            this.Controls.Add(this.lDescripcion);
+            this.Controls.Add(this.lCategoria);
+            this.Controls.Add(this.lArticulo);
             this.Controls.Add(this.pictureBox1);
             this.Name = "ListadoSubastas";
             this.Size = new System.Drawing.Size(680, 150);
+            this.Load += new System.EventHandler(this.ListadoSubastas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,12 +138,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lArticulo;
+        private System.Windows.Forms.Label lCategoria;
+        private System.Windows.Forms.Label lDescripcion;
+        private System.Windows.Forms.Label lPrecio;
+        private System.Windows.Forms.Label lFechaFin;
+        private System.Windows.Forms.Button bDelPuja;
+        private System.Windows.Forms.Button bVer;
     }
 }

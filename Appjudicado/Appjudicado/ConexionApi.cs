@@ -12,13 +12,17 @@ namespace Appjudicado
 
         public static List<Usuario> users;
         public static Usuario user;
-        public static void start()
+        public static List<Subasta> subastas;
+        public static Subasta sub;
+        public static void start()  // Funcion que inicializa todos los tipos de variables con los que podremos trabajar
         {
             users = new List<Usuario>();
             user = new Usuario();
+            subastas = new List<Subasta>();
+            sub = new Subasta();
         }
 
-        public static async void GetUsersAsync()
+        public static async void GetUsersAsync()    // FUNCION QUE SE USA PARA RECOGER TODOS LOS USUARIOS (LOGIN, REGISTRO)
         {
             using (var client = new HttpClient())
             {
@@ -41,25 +45,49 @@ namespace Appjudicado
             }
         }
 
-        public static async void GetUserAsync(int id)
+        public static async void verSubastas(int id)    // FUNCION QUE SE UTILIZA PARA EL BOTON "VER SUBASTAS"
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Usuario/GetUsuario/");
-                var respuesta = client.GetAsync("Usuario/"+id);
+                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Subasta/GetAllSubastasMenosUno/");
+                var respuesta = client.GetAsync(string.Format("?id={0}", id));
                 respuesta.Wait();
 
                 var response = respuesta.Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    var lectura = response.Content.ReadAsAsync<Usuario[]>();
+                    var lectura = response.Content.ReadAsAsync<Subasta[]>();
                     lectura.Wait();
 
-                    var usuarios = lectura.Result;
+                    var listasubastas = lectura.Result;
 
-                    foreach (var usuario in usuarios)
+                    foreach (var subas in listasubastas)
                     {
-                        user=usuario;
+                        subastas.Add(subas);
+                    }
+                }
+            }
+        }
+
+        public static async void misSubastas(int id)    // FUNCION QUE SE UTILIZA PARA EL BOTON "MIS SUBASTAS"
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Subasta/GetSubastaMias/");
+                var respuesta = client.GetAsync(string.Format("?id={0}", id));
+                respuesta.Wait();
+
+                var response = respuesta.Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var lectura = response.Content.ReadAsAsync<Subasta[]>();
+                    lectura.Wait();
+
+                    var listasubastas = lectura.Result;
+
+                    foreach (var subas in listasubastas)
+                    {
+                        subastas.Add(subas);
                     }
                 }
             }

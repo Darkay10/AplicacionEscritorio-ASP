@@ -32,8 +32,7 @@
             this.bListar = new System.Windows.Forms.Button();
             this.bPerfil = new System.Windows.Forms.Button();
             this.bAdmin = new System.Windows.Forms.Button();
-            this.lTexto = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bMisSubastas = new System.Windows.Forms.Button();
             this.panelDeControl = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
@@ -46,6 +45,7 @@
             this.bCrear.TabIndex = 0;
             this.bCrear.Text = "Crear subasta";
             this.bCrear.UseVisualStyleBackColor = true;
+            this.bCrear.Click += new System.EventHandler(this.bCrear_Click);
             // 
             // bListar
             // 
@@ -56,6 +56,7 @@
             this.bListar.TabIndex = 1;
             this.bListar.Text = "Ver subastas";
             this.bListar.UseVisualStyleBackColor = true;
+            this.bListar.Click += new System.EventHandler(this.bListar_Click);
             // 
             // bPerfil
             // 
@@ -66,6 +67,7 @@
             this.bPerfil.TabIndex = 2;
             this.bPerfil.Text = "Perfil";
             this.bPerfil.UseVisualStyleBackColor = true;
+            this.bPerfil.Click += new System.EventHandler(this.bPerfil_Click);
             // 
             // bAdmin
             // 
@@ -76,28 +78,23 @@
             this.bAdmin.TabIndex = 3;
             this.bAdmin.Text = "Administrar usuarios";
             this.bAdmin.UseVisualStyleBackColor = true;
+            this.bAdmin.Visible = false;
+            this.bAdmin.Click += new System.EventHandler(this.bAdmin_Click);
             // 
-            // lTexto
+            // bMisSubastas
             // 
-            this.lTexto.AutoSize = true;
-            this.lTexto.Location = new System.Drawing.Point(12, 391);
-            this.lTexto.Name = "lTexto";
-            this.lTexto.Size = new System.Drawing.Size(30, 13);
-            this.lTexto.TabIndex = 4;
-            this.lTexto.Text = "texto";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(11, 201);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 57);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Mis subastas";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bMisSubastas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.bMisSubastas.Location = new System.Drawing.Point(11, 201);
+            this.bMisSubastas.Name = "bMisSubastas";
+            this.bMisSubastas.Size = new System.Drawing.Size(100, 57);
+            this.bMisSubastas.TabIndex = 5;
+            this.bMisSubastas.Text = "Mis subastas";
+            this.bMisSubastas.UseVisualStyleBackColor = true;
+            this.bMisSubastas.Click += new System.EventHandler(this.bMisSubastas_Click);
             // 
             // panelDeControl
             // 
+            this.panelDeControl.AutoScroll = true;
             this.panelDeControl.Location = new System.Drawing.Point(120, 5);
             this.panelDeControl.Name = "panelDeControl";
             this.panelDeControl.Size = new System.Drawing.Size(680, 450);
@@ -109,8 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 461);
             this.Controls.Add(this.panelDeControl);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lTexto);
+            this.Controls.Add(this.bMisSubastas);
             this.Controls.Add(this.bAdmin);
             this.Controls.Add(this.bPerfil);
             this.Controls.Add(this.bListar);
@@ -119,7 +115,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -129,8 +124,7 @@
         private System.Windows.Forms.Button bListar;
         private System.Windows.Forms.Button bPerfil;
         private System.Windows.Forms.Button bAdmin;
-        private System.Windows.Forms.Label lTexto;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bMisSubastas;
         private System.Windows.Forms.FlowLayoutPanel panelDeControl;
     }
 }

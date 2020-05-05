@@ -20,15 +20,5 @@ namespace Appjudicado
             this.cantidad = cantidad;
             this.tiempo = tiempo;
         }
-
-        /*public Puja(Subasta subasta, Usuario pujador, float cantidad, DateTime fecha)
-        {
-            this.Subasta = subasta;
-            this.Pujador = pujador;
-            this.Cantidad = cantidad;
-            this.Fecha = fecha;
-        }*/
-
-
     }
 }

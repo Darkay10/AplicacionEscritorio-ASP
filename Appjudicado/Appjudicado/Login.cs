@@ -24,9 +24,13 @@ namespace Appjudicado
         private void button_login_Click(object sender, EventArgs e)     // Login - Comprueba que exista, sino lanza un mensaje de error
         {
             bool t = Sesion.login(user_tb.Text, pass_tb.Text);
-            if (t)
+            if (t == true && Sesion.logged.Habilitado == true)
             {
                 this.Close();
+                if (Sesion.logged.Rol == 1)
+                {
+                    Main.botonAdm.Show();
+                }
                 principal.Show();
             }
             else { MessageBox.Show("Error, no existe el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
