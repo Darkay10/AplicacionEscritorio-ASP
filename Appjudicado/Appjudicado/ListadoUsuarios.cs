@@ -12,9 +12,31 @@ namespace Appjudicado
 {
     public partial class ListadoUsuarios : UserControl
     {
-        public ListadoUsuarios()
+        public Usuario user;
+        public ListadoUsuarios(Usuario u)
         {
             InitializeComponent();
+            user = u;
+        }
+
+        private void ListadoUsuarios_Load(object sender, EventArgs e)
+        {
+            lUsuario.Text = user.User;
+            lEmail.Text = user.Email;
+            lDireccion.Text = user.Direccion;
+            lCp.Text = user.Cp;
+            lLocalidad.Text = user.Localidad;
+            lPais.Text = user.Pais;
+        }
+
+        private void bEditar_Click(object sender, EventArgs e)
+        {
+            Sesion.mostrarUsuario(user, 1);
+        }
+
+        private void bEliminar_Click(object sender, EventArgs e)
+        {
+            // FUNCION QUE MUESTRA UN CARTEL Y ELIMINA EL USUARIO SI SE ACEPTA
         }
     }
 }

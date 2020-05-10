@@ -34,6 +34,7 @@
             this.bAdmin = new System.Windows.Forms.Button();
             this.bMisSubastas = new System.Windows.Forms.Button();
             this.panelDeControl = new System.Windows.Forms.FlowLayoutPanel();
+            this.bMisPujas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bCrear
@@ -72,7 +73,7 @@
             // bAdmin
             // 
             this.bAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.bAdmin.Location = new System.Drawing.Point(11, 264);
+            this.bAdmin.Location = new System.Drawing.Point(11, 327);
             this.bAdmin.Name = "bAdmin";
             this.bAdmin.Size = new System.Drawing.Size(100, 57);
             this.bAdmin.TabIndex = 3;
@@ -100,11 +101,23 @@
             this.panelDeControl.Size = new System.Drawing.Size(680, 450);
             this.panelDeControl.TabIndex = 6;
             // 
+            // bMisPujas
+            // 
+            this.bMisPujas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.bMisPujas.Location = new System.Drawing.Point(11, 264);
+            this.bMisPujas.Name = "bMisPujas";
+            this.bMisPujas.Size = new System.Drawing.Size(100, 57);
+            this.bMisPujas.TabIndex = 7;
+            this.bMisPujas.Text = "Mis pujas";
+            this.bMisPujas.UseVisualStyleBackColor = true;
+            this.bMisPujas.Click += new System.EventHandler(this.bMisPujas_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 461);
+            this.Controls.Add(this.bMisPujas);
             this.Controls.Add(this.panelDeControl);
             this.Controls.Add(this.bMisSubastas);
             this.Controls.Add(this.bAdmin);
@@ -126,6 +139,7 @@
         private System.Windows.Forms.Button bAdmin;
         private System.Windows.Forms.Button bMisSubastas;
         private System.Windows.Forms.FlowLayoutPanel panelDeControl;
+        private System.Windows.Forms.Button bMisPujas;
     }
 }
 

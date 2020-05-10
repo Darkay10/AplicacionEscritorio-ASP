@@ -96,7 +96,7 @@
             // 
             // bDelPuja
             // 
-            this.bDelPuja.Location = new System.Drawing.Point(588, 105);
+            this.bDelPuja.Location = new System.Drawing.Point(589, 53);
             this.bDelPuja.Name = "bDelPuja";
             this.bDelPuja.Size = new System.Drawing.Size(75, 39);
             this.bDelPuja.TabIndex = 8;
@@ -106,7 +106,7 @@
             // 
             // bVer
             // 
-            this.bVer.Location = new System.Drawing.Point(588, 66);
+            this.bVer.Location = new System.Drawing.Point(589, 95);
             this.bVer.Name = "bVer";
             this.bVer.Size = new System.Drawing.Size(75, 39);
             this.bVer.TabIndex = 9;

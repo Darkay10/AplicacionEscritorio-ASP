@@ -93,6 +93,30 @@ namespace Appjudicado
             }
         }
 
+        public static async void administrarUsers(int id) // FUNCION QUE SE UTILIZA PARA EL BOTON "ADMINISTRAR USUARIOS"
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Usuario/GetUsuariosMenosUno/");
+                var respuesta = client.GetAsync(string.Format("?id={0}", id));
+                respuesta.Wait();
+
+                var response = respuesta.Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var lectura = response.Content.ReadAsAsync<Usuario[]>();
+                    lectura.Wait();
+
+                    var listausuario = lectura.Result;
+
+                    foreach (var user in listausuario)
+                    {
+                        users.Add(user);
+                    }
+                }
+            }
+        }
+
         public static bool RegistrarUser(string nick, string p, string e, string d, string l, string pais, string cod)
         {
             using (var client = new HttpClient())

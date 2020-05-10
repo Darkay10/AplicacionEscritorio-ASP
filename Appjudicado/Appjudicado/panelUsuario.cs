@@ -24,7 +24,7 @@ namespace Appjudicado
 
         private void PanelUsuario_Load(object sender, EventArgs e)
         {
-           if (funcionalidad == 1)    //  EDITAR USUARIO
+            if (funcionalidad == 1)    //  EDITAR USUARIO
             {
                 datosUser();
                 modoLectura();
@@ -42,35 +42,18 @@ namespace Appjudicado
 
         private void bAcepMod_Click(object sender, EventArgs e)
         {
-            if (funcionalidad == 1)    //  EDITAR USUARIO - Modificar y guardar
+            //  EDITAR USUARIO y PERFIL - Modificar y guardar - Los 2 hacen la misma funcion, entonces no hay porque usar la var "Funcionalidad"
+            if (editando == false)
             {
-                if (editando == false)
-                {
-                    editando = true;
-                    modoEditar();
-                    bAcepMod.Text = "Guardar";
-                    bChangeDel.Text = "Cancelar";
-                }
-                else
-                {
-                    editando = false;
-                    // Sesion.modificando(textbox_user.Text, textbox_email.Text, textbox_direccion.Text, textbox_codigo_postal.Text, textbox_localidad.Text,textbox_pais.Text);
-                }
+                editando = true;
+                modoEditar();
+                bAcepMod.Text = "Guardar";
+                bChangeDel.Text = "Cancelar";
             }
-            else if (funcionalidad == 2)    // PERFIL - Modificar y guardar
+            else
             {
-                if (editando == false)
-                {
-                    modoLectura();
-                    modoEditar();
-                    bAcepMod.Text = "Guardar";
-                    bChangeDel.Text = "Cancelar";
-                }
-                else
-                {
-                    bAcepMod.Text = "Modificar";
-                    bChangeDel.Text = "Cambiar contraseña";
-                }
+                editando = false;
+                // Sesion.guardarUsuario(textbox_user.Text, textbox_email.Text, textbox_direccion.Text, textbox_codigo_postal.Text, textbox_localidad.Text,textbox_pais.Text);
             }
         }
 
@@ -80,7 +63,6 @@ namespace Appjudicado
             {
                 if (editando == false)
                 {
-                    editando = true;
                     //Sesion.eliminarUsuario(user);
                 }
                 else
@@ -95,7 +77,7 @@ namespace Appjudicado
             {
                 if (editando == false)
                 {
-                    editando = true;
+                    // Sesion.cambiarContra(user);
                 }
                 else
                 {

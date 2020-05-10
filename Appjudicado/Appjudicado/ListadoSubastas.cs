@@ -56,11 +56,11 @@ namespace Appjudicado
             // Esta funcion llamará al PanelSubasta con los datos de la subasta en cuestión
             if (funcionalidad == 1)
             {
-                Sesion.mostrarSubasta(sub, 2);
+                Sesion.mostrarSubasta(sub, 2);  // LE PASAMOS EL PARÁMETRO DE LA FUNCION QUE VA A HACER
             }
             else if (funcionalidad == 2)
             {
-                Sesion.mostrarSubasta(sub, 3);
+                Sesion.mostrarSubasta(sub, 3);  // LE PASAMOS EL PARÁMETRO DE LA FUNCION QUE VA A HACER
             }
         }
     }

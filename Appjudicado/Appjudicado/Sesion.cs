@@ -34,7 +34,7 @@ namespace Appjudicado
             return log;
         }
 
-        public static void modificando(string nick, string p, string e, string d, string l, string pais, string cod)
+        public static void guardarUsuario(string nick, string p, string e, string d, string l, string pais, string cod)
         {
             // POR AHORA NADA
         }
@@ -89,17 +89,6 @@ namespace Appjudicado
             Main.panel.Controls.Add(perfil);
             Main.panel.Show();
         }
-
-        public static void mostrarSubasta(Subasta s, int fun)
-        {
-            if (Main.panel.Controls.Count > 0)
-            {
-                Main.panel.Controls.Clear();
-            }
-            PanelSubasta perfil = new PanelSubasta(fun, s);
-            Main.panel.Controls.Add(perfil);
-            Main.panel.Show();
-        }
         
         public static void verSubastas()    // FUNCION QUE LLAMA EL BOTON "VER SUBASTAS" del main.cs - BOTONES
         {
@@ -143,24 +132,46 @@ namespace Appjudicado
             Main.panel.Show();
         }
 
-        public static void verUsuarios()    // FUNCION QUE LLAMA EL BOTON "ADMINISTRAR USUARIOS" del main.cs - FALTA TERMINAR
+        public static void administrarUsers()    // FUNCION QUE LLAMA EL BOTON "ADMINISTRAR USUARIOS" del main.cs - FALTA TERMINAR
         {
             ConexionApi.start();
-            //ConexionApi.verUsuarios(logged.Id);
-            listadoSubastas = new List<Subasta>();
-            foreach (Subasta s in ConexionApi.subastas)
+            ConexionApi.administrarUsers(logged.Id);
+            listadoUsuarios = new List<Usuario>();
+            foreach (Usuario u in ConexionApi.users)
             {
-                listadoSubastas.Add(s);
+                listadoUsuarios.Add(u);
             }
             if (Main.panel.Controls.Count > 0)
             {
                 Main.panel.Controls.Clear();
             }
-            for (int i = 0; i < listadoSubastas.Count(); i++)
+            for (int i = 0; i < listadoUsuarios.Count(); i++)
             {
-                ListadoSubastas userControl = new ListadoSubastas(listadoSubastas[i], 1);
+                ListadoUsuarios userControl = new ListadoUsuarios(listadoUsuarios[i]);
                 Main.panel.Controls.Add(userControl);
             }
+            Main.panel.Show();
+        }
+
+        public static void mostrarUsuario(Usuario u, int fun)
+        {
+            if (Main.panel.Controls.Count > 0)
+            {
+                Main.panel.Controls.Clear();
+            }
+            PanelUsuario perfil = new PanelUsuario(fun, u);
+            Main.panel.Controls.Add(perfil);
+            Main.panel.Show();
+        }
+
+        public static void mostrarSubasta(Subasta s, int fun)
+        {
+            if (Main.panel.Controls.Count > 0)
+            {
+                Main.panel.Controls.Clear();
+            }
+            PanelSubasta perfil = new PanelSubasta(fun, s);
+            Main.panel.Controls.Add(perfil);
             Main.panel.Show();
         }
     }

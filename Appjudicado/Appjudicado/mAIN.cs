@@ -34,7 +34,7 @@ namespace Appjudicado
 
         private void bCrear_Click(object sender, EventArgs e)
         {
-            Sesion.crearSubasta();
+            Sesion.crearSubasta();  // Mostrará "PanelSubasta" vacío y permitirá la introducción de los datos para añadir una subasta
         }
 
         private void bPerfil_Click(object sender, EventArgs e)
@@ -54,7 +54,12 @@ namespace Appjudicado
 
         private void bAdmin_Click(object sender, EventArgs e)
         {
-            // Sesion.administrarUsers();  // EXPLICAR QUE HACE
+            Sesion.administrarUsers();  // Muestra un listado en el que podremos modificar y eliminar usuarios
+        }
+
+        private void bMisPujas_Click(object sender, EventArgs e)
+        {
+            Sesion.misPujas();  // Muestra un listado en el que podremos ver las subastas en las que hemos pujado
         }
     }
 }
