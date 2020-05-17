@@ -75,12 +75,12 @@ namespace Appjudicado
             bool res = ConexionApi.cambiarContra(us.Id, pass);
             if (res)
             {
-                MessageBox.Show("Se ha eliminado correctamente");
+                MessageBox.Show("Se ha modificado correctamente la contraseña");
                 Main.panel.Hide();
             }
             else
             {
-                MessageBox.Show("Hemos tenido un fallo al eliminar");
+                MessageBox.Show("Hemos tenido un fallo al cambiar la contraseña");
             }
         }
 

@@ -107,7 +107,8 @@ namespace Appjudicado
             {
                 if (editando == false)
                 {
-                    // Sesion.cambiarContra(user);
+                    Confirm r = new Confirm(user);
+                    r.ShowDialog();
                 }
                 else
                 {

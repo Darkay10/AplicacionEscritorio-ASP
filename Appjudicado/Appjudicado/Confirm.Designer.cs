@@ -28,53 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.tbPass1 = new System.Windows.Forms.TextBox();
+            this.tbPass2 = new System.Windows.Forms.TextBox();
+            this.bAceptar = new System.Windows.Forms.Button();
+            this.bCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbPass1
             // 
-            this.textBox1.Location = new System.Drawing.Point(40, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
-            this.textBox1.TabIndex = 0;
+            this.tbPass1.Location = new System.Drawing.Point(40, 40);
+            this.tbPass1.Name = "tbPass1";
+            this.tbPass1.Size = new System.Drawing.Size(175, 20);
+            this.tbPass1.TabIndex = 0;
             // 
-            // textBox2
+            // tbPass2
             // 
-            this.textBox2.Location = new System.Drawing.Point(40, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 20);
-            this.textBox2.TabIndex = 1;
+            this.tbPass2.Location = new System.Drawing.Point(40, 89);
+            this.tbPass2.Name = "tbPass2";
+            this.tbPass2.Size = new System.Drawing.Size(175, 20);
+            this.tbPass2.TabIndex = 1;
             // 
-            // button1
+            // bAceptar
             // 
-            this.button1.Location = new System.Drawing.Point(40, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bAceptar.Location = new System.Drawing.Point(40, 129);
+            this.bAceptar.Name = "bAceptar";
+            this.bAceptar.Size = new System.Drawing.Size(75, 23);
+            this.bAceptar.TabIndex = 2;
+            this.bAceptar.Text = "Aceptar";
+            this.bAceptar.UseVisualStyleBackColor = true;
+            this.bAceptar.Click += new System.EventHandler(this.bAceptar_Click);
             // 
-            // button2
+            // bCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(140, 129);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bCancelar.Location = new System.Drawing.Point(140, 129);
+            this.bCancelar.Name = "bCancelar";
+            this.bCancelar.Size = new System.Drawing.Size(75, 23);
+            this.bCancelar.TabIndex = 3;
+            this.bCancelar.Text = "Cancelar";
+            this.bCancelar.UseVisualStyleBackColor = true;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // Confirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(250, 168);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.bCancelar);
+            this.Controls.Add(this.bAceptar);
+            this.Controls.Add(this.tbPass2);
+            this.Controls.Add(this.tbPass1);
             this.Name = "Confirm";
             this.Text = "Cambiar contraseña";
             this.ResumeLayout(false);
@@ -84,9 +86,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox tbPass1;
+        private System.Windows.Forms.TextBox tbPass2;
+        private System.Windows.Forms.Button bAceptar;
+        private System.Windows.Forms.Button bCancelar;
     }
 }
