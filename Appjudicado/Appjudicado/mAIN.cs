@@ -32,34 +32,34 @@ namespace Appjudicado
             }
         }
 
-        private void bCrear_Click(object sender, EventArgs e)
+        private void bCrear_Click(object sender, EventArgs e)       // Mostrará "PanelSubasta" vacío y permitirá la introducción de los datos para añadir una subasta
         {
-            Sesion.crearSubasta();  // Mostrará "PanelSubasta" vacío y permitirá la introducción de los datos para añadir una subasta
+            Sesion.crearSubasta();  
         }
 
-        private void bPerfil_Click(object sender, EventArgs e)
+        private void bPerfil_Click(object sender, EventArgs e)      // La funcionalidad mostrará los datos en el PanelUsuario - Permitiendo modificar la contraseña y modificar el user
         {
-            Sesion.mostrarPerfil(); // La funcionalidad mostrará los datos en el PanelUsuario - Permitiendo modificar la contraseña y modificar el user
+            Sesion.mostrarPerfil(); 
         }
 
-        private void bListar_Click(object sender, EventArgs e)
+        private void bListar_Click(object sender, EventArgs e)      // La funcionalidad 1 servirá para que puje y la 2 para eliminar la subasta - En este caso es la 1
         {
-            Sesion.verSubastas();   // La funcionalidad 1 servirá para que puje y la 2 para eliminar la subasta - En este caso es la 1
+            Sesion.verSubastas();   
         }
 
-        private void bMisSubastas_Click(object sender, EventArgs e)
+        private void bMisSubastas_Click(object sender, EventArgs e) // La funcionalidad 1 servirá para que puje y la 2 para eliminar la subasta - En este caso es la 2
         {
-            Sesion.misSubastas();   // La funcionalidad 1 servirá para que puje y la 2 para eliminar la subasta - En este caso es la 2
+            Sesion.misSubastas();
         }
 
-        private void bAdmin_Click(object sender, EventArgs e)
+        private void bAdmin_Click(object sender, EventArgs e)       // Muestra un listado en el que podremos modificar y eliminar usuarios
         {
-            Sesion.administrarUsers();  // Muestra un listado en el que podremos modificar y eliminar usuarios
+            Sesion.administrarUsers();  
         }
 
-        private void bMisPujas_Click(object sender, EventArgs e)
+        private void bMisPujas_Click(object sender, EventArgs e)    // Muestra un listado en el que podremos ver las subastas en las que hemos pujado
         {
-            Sesion.misPujas();  // Muestra un listado en el que podremos ver las subastas en las que hemos pujado
+            Sesion.misPujas();  
         }
     }
 }

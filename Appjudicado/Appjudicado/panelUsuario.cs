@@ -24,17 +24,16 @@ namespace Appjudicado
 
         private void PanelUsuario_Load(object sender, EventArgs e)
         {
+            datosUser();
+            modoLectura();
             if (funcionalidad == 1)    //  EDITAR USUARIO
             {
-                datosUser();
-                modoLectura();
+                cbAdmin.Show();
                 bAcepMod.Text = "Modificar";
                 bChangeDel.Text = "Eliminar";
             }
             else if (funcionalidad == 2)    // PERFIL
             {
-                datosUser();
-                modoLectura();
                 bAcepMod.Text = "Modificar";
                 bChangeDel.Text = "Cambiar contraseña";
             }
@@ -43,17 +42,48 @@ namespace Appjudicado
         private void bAcepMod_Click(object sender, EventArgs e)
         {
             //  EDITAR USUARIO y PERFIL - Modificar y guardar - Los 2 hacen la misma funcion, entonces no hay porque usar la var "Funcionalidad"
-            if (editando == false)
+            if (funcionalidad == 1)    //  EDITAR USUARIO
             {
-                editando = true;
-                modoEditar();
-                bAcepMod.Text = "Guardar";
-                bChangeDel.Text = "Cancelar";
+                if (editando == false)
+                {
+                    editando = true;
+                    modoEditar();
+                    bAcepMod.Text = "Guardar";
+                    bChangeDel.Text = "Cancelar";
+                }
+                else
+                {
+                    editando = false;
+                    modoLectura();
+                    bAcepMod.Text = "Modificar";
+                    bChangeDel.Text = "Eliminar";
+                    if (cbAdmin.Checked)
+                    {
+                        Sesion.guardarUsuario(user, textbox_user.Text, user.Pass, textbox_email.Text, textbox_direccion.Text, textbox_localidad.Text, textbox_pais.Text, textbox_codigo_postal.Text, 1, funcionalidad);
+                    }
+                    else
+                    {
+                        Sesion.guardarUsuario(user, textbox_user.Text, user.Pass, textbox_email.Text, textbox_direccion.Text, textbox_localidad.Text, textbox_pais.Text, textbox_codigo_postal.Text, 0, funcionalidad);
+                    }
+                }
             }
-            else
+            else if (funcionalidad == 2)    // PERFIL
             {
-                editando = false;
-                // Sesion.guardarUsuario(textbox_user.Text, textbox_email.Text, textbox_direccion.Text, textbox_codigo_postal.Text, textbox_localidad.Text,textbox_pais.Text);
+                if (editando == false)
+                {
+                    editando = true;
+                    modoEditar();
+                    bAcepMod.Text = "Guardar";
+                    bChangeDel.Text = "Cancelar";
+                }
+                else
+                {
+                    editando = false;
+                    modoLectura();
+                    bAcepMod.Text = "Modificar";
+                    bChangeDel.Text = "Cambiar contraseña";
+                    Sesion.guardarUsuario(user, textbox_user.Text, user.Pass, textbox_email.Text, textbox_direccion.Text, textbox_localidad.Text, textbox_pais.Text, textbox_codigo_postal.Text, user.Rol, funcionalidad);
+                }
             }
         }
 
@@ -63,7 +93,7 @@ namespace Appjudicado
             {
                 if (editando == false)
                 {
-                    //Sesion.eliminarUsuario(user);
+                    Sesion.eliminarUsuario(user);
                 }
                 else
                 {
@@ -92,18 +122,18 @@ namespace Appjudicado
         private void datosUser()
         {
             textbox_user.Text = user.User;
-            textbox_pass.Text = user.Pass;
             textbox_email.Text = user.Email;
             textbox_direccion.Text = user.Direccion;
             textbox_codigo_postal.Text = user.Cp;
             textbox_localidad.Text = user.Localidad;
             textbox_pais.Text = user.Pais;
+            //if (user.Rol == 1)
+                //cbAdmin.
         }
 
         private void modoLectura()
         {
             textbox_user.ReadOnly = true;
-            textbox_pass.ReadOnly = true;
             textbox_email.ReadOnly = true;
             textbox_direccion.ReadOnly = true;
             textbox_codigo_postal.ReadOnly = true;
@@ -114,7 +144,6 @@ namespace Appjudicado
         private void modoEditar()
         {
             textbox_user.ReadOnly = false;
-            textbox_pass.ReadOnly = false;
             textbox_email.ReadOnly = false;
             textbox_direccion.ReadOnly = false;
             textbox_codigo_postal.ReadOnly = false;

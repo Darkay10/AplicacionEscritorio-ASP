@@ -37,6 +37,7 @@ namespace Appjudicado
         private void bEliminar_Click(object sender, EventArgs e)
         {
             // FUNCION QUE MUESTRA UN CARTEL Y ELIMINA EL USUARIO SI SE ACEPTA
+            Sesion.eliminarUsuario(user);
         }
     }
 }

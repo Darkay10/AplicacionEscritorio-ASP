@@ -34,9 +34,54 @@ namespace Appjudicado
             return log;
         }
 
-        public static void guardarUsuario(string nick, string p, string e, string d, string l, string pais, string cod)
+        public static void guardarUsuario(Usuario user, string nick, string p, string e, string d, string l, string pais, string cod, int rol, int fun)
         {
-            // POR AHORA NADA
+            ConexionApi.start();
+            bool res = ConexionApi.guardarUsuario(user.Id, nick, p, e, d, l, pais, cod, rol);
+            if (res)
+            {
+                MessageBox.Show("Se ha guardado correctamente");
+                if (fun == 1)
+                {
+                    Main.panel.Hide();
+                }
+                else if (fun == 2)
+                {
+                    Usuario nuevo = new Usuario(user.Id, nick, p, e, d, l, pais, cod, rol, user.Habilitado);
+                    logged = nuevo;
+                }
+            }
+            else
+                MessageBox.Show("Hemos tenido un fallo");
+        }
+
+        public static void eliminarUsuario(Usuario user)
+        {
+            ConexionApi.start();
+            bool res = ConexionApi.eliminarUsuario(user);
+            if (res)
+            {
+                MessageBox.Show("Se ha eliminado correctamente");
+                Main.panel.Hide();
+            }
+            else {
+                MessageBox.Show("Hemos tenido un fallo al eliminar");
+            }
+        }
+
+        public static void cambiarContra (Usuario us, string pass)
+        {
+            ConexionApi.start();
+            bool res = ConexionApi.cambiarContra(us.Id, pass);
+            if (res)
+            {
+                MessageBox.Show("Se ha eliminado correctamente");
+                Main.panel.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Hemos tenido un fallo al eliminar");
+            }
         }
 
         public static int registro(string nick, string p, string e, string d, string l, string pais, string cod)    // Funcion que llama la pagina registro.cs
@@ -112,6 +157,27 @@ namespace Appjudicado
         }
 
         public static void misSubastas()    // FUNCION QUE LLAMA EL BOTON "MIS SUBASTAS" del main.cs - BOTONES
+        {
+            ConexionApi.start();
+            ConexionApi.misSubastas(logged.Id);
+            listadoSubastas = new List<Subasta>();
+            foreach (Subasta s in ConexionApi.subastas)
+            {
+                listadoSubastas.Add(s);
+            }
+            if (Main.panel.Controls.Count > 0)
+            {
+                Main.panel.Controls.Clear();
+            }
+            for (int i = 0; i < listadoSubastas.Count(); i++)
+            {
+                ListadoSubastas userControl = new ListadoSubastas(listadoSubastas[i], 2);
+                Main.panel.Controls.Add(userControl);
+            }
+            Main.panel.Show();
+        }
+
+        public static void misPujas()    // FUNCION QUE LLAMA EL BOTON "MIS PUJAS" del main.cs - BOTONES
         {
             ConexionApi.start();
             ConexionApi.misSubastas(logged.Id);
