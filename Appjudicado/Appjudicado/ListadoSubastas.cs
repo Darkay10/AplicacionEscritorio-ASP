@@ -26,7 +26,7 @@ namespace Appjudicado
             // Asignamos correctamente los datos a los labels para mostrar la información y los botones se preparán para su futuro uso
             lArticulo.Text = "Artículo: " + sub.Articulo;
             lCategoria.Text = "Categoría: " + sub.Categoria;
-            lFechaFin.Text = "Fecha final: " + sub.Fin;
+            lFechaFin.Text = "Fecha final: " + sub.Fin.ToString("yyyy-MM-dd");
             lDescripcion.Text = "Descripción: " + sub.Descripcion;
             lPrecio.Text = "Precio: " + sub.Precio;
             if (funcionalidad == 1)
@@ -44,10 +44,13 @@ namespace Appjudicado
             if (funcionalidad == 1)
             {
                 // FUNCION PUJAR - En esta abre una pestaña en la que se pide lo que quiere pujar el usuario
+                Confirm r = new Confirm(sub, 2);
+                r.ShowDialog();
             }
             else if (funcionalidad == 2)
             {
                 // FUNCION ELIMINAR - En esta abre una pestaña en la que se pide una confirmación para eliminar la subasta
+                Sesion.eliminarSubasta(sub);
             }
         }
 

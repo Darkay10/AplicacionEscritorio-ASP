@@ -31,7 +31,7 @@ namespace Appjudicado
 
         private void PanelSubasta_Load(object sender, EventArgs e)
         {
-            if (funcionalidad == 1) // CREAR SUBASTA
+            if (funcionalidad == 1)         // CREAR SUBASTA
             {
                 modoEditar();
                 bAdd.Text = "Añadir";
@@ -57,11 +57,13 @@ namespace Appjudicado
         {
             if (funcionalidad == 1) // CREAR SUBASTA
             {
-               // CANCELAR QUE DEBERIA CERRAR EL PANEL Y YA
+                // CANCELAR QUE DEBERIA CERRAR EL PANEL Y YA
+                Main.panel.Hide();
             }
             else if (funcionalidad == 2)   // VER SUBASTAS 
             {
                 // CANCELAR QUE DEBERIA CERRAR EL PANEL Y YA
+                Main.panel.Hide();
             }
             else if (funcionalidad == 3)    // MIS SUBASTAS
             {
@@ -69,6 +71,7 @@ namespace Appjudicado
                 if (editando == false)
                 {
                     // FUNCION ELIMINAR
+                    Sesion.eliminarSubasta(sub);
                 }
                 else
                 {
@@ -86,10 +89,13 @@ namespace Appjudicado
             if (funcionalidad == 1) // CREAR SUBASTA
             {
                 // SE COMPRUEBA QUE TODOS LOS DATOS SEAN CORRECTOS Y DESPUES SE INTRODUCE
+                Sesion.insertarSubasta(textbox_articulo.Text, textbox_categoria.Text, textbox_descripcion.Text, textbox_imagen.Text, float.Parse(textbox_precio.Text), dtInicio.Value, dtFinal.Value);
             }
             else if (funcionalidad == 2)   // VER SUBASTAS 
             {
                 // SE MUESTRA UN CARTEL PARA PUJAR LO QUE EL USUARIO QUIERA
+                Confirm r = new Confirm(sub, 2);
+                r.ShowDialog();
             }
             else if (funcionalidad == 3)    // MIS SUBASTAS
             {
@@ -103,6 +109,7 @@ namespace Appjudicado
                 else
                 {
                     // FUNCION EDITAR SUBASTA
+                    Sesion.editarSubasta(sub, textbox_articulo.Text, textbox_categoria.Text, textbox_descripcion.Text, textbox_imagen.Text, float.Parse(textbox_precio.Text), dtInicio.Value, dtFinal.Value);
                 }
             }
         }
@@ -114,8 +121,8 @@ namespace Appjudicado
             textbox_descripcion.Text = sub.Descripcion;
             textbox_precio.Text = sub.Precio.ToString();
             textbox_imagen.Text = sub.Imagen;
-            textbox_fechainicio.Text = sub.Comienzo.ToString();
-            textbox_fechafin.Text = sub.Fin.ToString();
+            dtInicio.Value = sub.Comienzo;
+            dtFinal.Value = sub.Fin;
         }
 
         private void modoLectura()
@@ -125,8 +132,6 @@ namespace Appjudicado
             textbox_descripcion.ReadOnly = true;
             textbox_precio.ReadOnly = true;
             textbox_imagen.ReadOnly = true;
-            textbox_fechainicio.ReadOnly = true;
-            textbox_fechafin.ReadOnly = true;
         }
 
         private void modoEditar()
@@ -136,8 +141,6 @@ namespace Appjudicado
             textbox_descripcion.ReadOnly = false;
             textbox_precio.ReadOnly = false;
             textbox_imagen.ReadOnly = false;
-            textbox_fechainicio.ReadOnly = false;
-            textbox_fechafin.ReadOnly = false;
         }
     }
 }

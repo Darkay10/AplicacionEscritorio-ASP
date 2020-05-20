@@ -43,8 +43,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textbox_imagen = new System.Windows.Forms.TextBox();
-            this.textbox_fechainicio = new System.Windows.Forms.TextBox();
-            this.textbox_fechafin = new System.Windows.Forms.TextBox();
+            this.dtInicio = new System.Windows.Forms.DateTimePicker();
+            this.dtFinal = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,21 +61,21 @@
             // 
             this.textbox_descripcion.Location = new System.Drawing.Point(132, 148);
             this.textbox_descripcion.Name = "textbox_descripcion";
-            this.textbox_descripcion.Size = new System.Drawing.Size(100, 20);
+            this.textbox_descripcion.Size = new System.Drawing.Size(151, 20);
             this.textbox_descripcion.TabIndex = 19;
             // 
             // textbox_precio
             // 
             this.textbox_precio.Location = new System.Drawing.Point(132, 219);
             this.textbox_precio.Name = "textbox_precio";
-            this.textbox_precio.Size = new System.Drawing.Size(100, 20);
+            this.textbox_precio.Size = new System.Drawing.Size(151, 20);
             this.textbox_precio.TabIndex = 18;
             // 
             // textbox_articulo
             // 
             this.textbox_articulo.Location = new System.Drawing.Point(132, 30);
             this.textbox_articulo.Name = "textbox_articulo";
-            this.textbox_articulo.Size = new System.Drawing.Size(100, 20);
+            this.textbox_articulo.Size = new System.Drawing.Size(151, 20);
             this.textbox_articulo.TabIndex = 17;
             // 
             // label4
@@ -128,7 +128,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(424, 290);
+            this.label6.Location = new System.Drawing.Point(350, 290);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 13);
             this.label6.TabIndex = 33;
@@ -138,7 +138,7 @@
             // 
             this.textbox_categoria.Location = new System.Drawing.Point(132, 91);
             this.textbox_categoria.Name = "textbox_categoria";
-            this.textbox_categoria.Size = new System.Drawing.Size(100, 20);
+            this.textbox_categoria.Size = new System.Drawing.Size(151, 20);
             this.textbox_categoria.TabIndex = 36;
             // 
             // label7
@@ -161,7 +161,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(424, 226);
+            this.label2.Location = new System.Drawing.Point(350, 226);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 40;
@@ -171,29 +171,29 @@
             // 
             this.textbox_imagen.Location = new System.Drawing.Point(132, 283);
             this.textbox_imagen.Name = "textbox_imagen";
-            this.textbox_imagen.Size = new System.Drawing.Size(100, 20);
+            this.textbox_imagen.Size = new System.Drawing.Size(151, 20);
             this.textbox_imagen.TabIndex = 41;
             // 
-            // textbox_fechainicio
+            // dtInicio
             // 
-            this.textbox_fechainicio.Location = new System.Drawing.Point(520, 223);
-            this.textbox_fechainicio.Name = "textbox_fechainicio";
-            this.textbox_fechainicio.Size = new System.Drawing.Size(100, 20);
-            this.textbox_fechainicio.TabIndex = 42;
+            this.dtInicio.Location = new System.Drawing.Point(433, 226);
+            this.dtInicio.Name = "dtInicio";
+            this.dtInicio.Size = new System.Drawing.Size(217, 20);
+            this.dtInicio.TabIndex = 44;
             // 
-            // textbox_fechafin
+            // dtFinal
             // 
-            this.textbox_fechafin.Location = new System.Drawing.Point(520, 287);
-            this.textbox_fechafin.Name = "textbox_fechafin";
-            this.textbox_fechafin.Size = new System.Drawing.Size(100, 20);
-            this.textbox_fechafin.TabIndex = 43;
+            this.dtFinal.Location = new System.Drawing.Point(433, 284);
+            this.dtFinal.Name = "dtFinal";
+            this.dtFinal.Size = new System.Drawing.Size(217, 20);
+            this.dtFinal.TabIndex = 45;
             // 
             // PanelSubasta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textbox_fechafin);
-            this.Controls.Add(this.textbox_fechainicio);
+            this.Controls.Add(this.dtFinal);
+            this.Controls.Add(this.dtInicio);
             this.Controls.Add(this.textbox_imagen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -234,7 +234,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textbox_imagen;
-        private System.Windows.Forms.TextBox textbox_fechainicio;
-        private System.Windows.Forms.TextBox textbox_fechafin;
+        private System.Windows.Forms.DateTimePicker dtInicio;
+        private System.Windows.Forms.DateTimePicker dtFinal;
     }
 }

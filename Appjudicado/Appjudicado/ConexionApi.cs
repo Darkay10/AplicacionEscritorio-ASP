@@ -37,7 +37,7 @@ namespace Appjudicado
                     var lectura = response.Content.ReadAsAsync<Usuario[]>();
                     lectura.Wait();
                     var usuarios = lectura.Result;
-                    
+
                     foreach (var usuario in usuarios)
                     {
                         users.Add(usuario);
@@ -75,6 +75,30 @@ namespace Appjudicado
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Subasta/GetSubastaMias/");
+                var respuesta = client.GetAsync(string.Format("?id={0}", id));
+                respuesta.Wait();
+
+                var response = respuesta.Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var lectura = response.Content.ReadAsAsync<Subasta[]>();
+                    lectura.Wait();
+
+                    var listasubastas = lectura.Result;
+
+                    foreach (var subas in listasubastas)
+                    {
+                        subastas.Add(subas);
+                    }
+                }
+            }
+        }
+
+        public static async void misPujas(int id)    // FUNCION QUE SE UTILIZA PARA EL BOTON "MIS PUJAS"
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Subasta/GetSubastasPujadas/");
                 var respuesta = client.GetAsync(string.Format("?id={0}", id));
                 respuesta.Wait();
 
@@ -209,6 +233,86 @@ namespace Appjudicado
                 bool res = false;
                 client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Usuario/cambiarContra/");
                 var respuesta = client.GetAsync(string.Format("?id={0}&pass={1}", id, p));
+                respuesta.Wait();
+
+                var response = respuesta.Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var lectura = response.Content.ReadAsAsync<Boolean>();
+                    lectura.Wait();
+                    res = lectura.Result;
+                }
+                return res;
+            }
+        }
+
+        public static bool insertarSubasta(string a, string c, string d, string i, float p, DateTime dti, DateTime dtf)
+        {
+            using (var client = new HttpClient())
+            {
+                bool res = false;
+                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Subasta/InsertSubasta/");
+                var respuesta = client.GetAsync(string.Format("?a={0}&c={1}&d={2}&i={3}&p={4}&idv={5}&ti={6}&tf={7}", a, c, d, i, p, Sesion.logged.Id, dti.ToString("yyyy-MM-dd"), dtf.ToString("yyyy-MM-dd")));
+                respuesta.Wait();
+
+                var response = respuesta.Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var lectura = response.Content.ReadAsAsync<Boolean>();
+                    lectura.Wait();
+                    res = lectura.Result;
+                }
+                return res;
+            }
+        }
+
+        public static bool editarSubasta(Subasta s, string a, string c, string d, string i, float p, DateTime dti, DateTime dtf)
+        {
+            using (var client = new HttpClient())
+            {
+                bool res = false;
+                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Subasta/UpdateSubasta/");
+                var respuesta = client.GetAsync(string.Format("?id={0}&a={1}&c={2}&d={3}&i={4}&p={5}&ti={6}&tf={7}", s.Id, a, c, d, i, p, dti.ToString("yyyy-MM-dd"), dtf.ToString("yyyy-MM-dd")));
+                respuesta.Wait();
+
+                var response = respuesta.Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var lectura = response.Content.ReadAsAsync<Boolean>();
+                    lectura.Wait();
+                    res = lectura.Result;
+                }
+                return res;
+            }
+        }
+
+        public static bool eliminarSubasta(Subasta sub)
+        {
+            using (var client = new HttpClient())
+            {
+                bool res = false;
+                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Subasta/DeleteSubasta/");
+                var respuesta = client.GetAsync(string.Format("?id={0}", sub.Id));
+                respuesta.Wait();
+
+                var response = respuesta.Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var lectura = response.Content.ReadAsAsync<Boolean>();
+                    lectura.Wait();
+                    res = lectura.Result;
+                }
+                return res;
+            }
+        }
+
+        public static bool pujarSubasta(Subasta sub, Usuario u, float precio)
+        {
+            using (var client = new HttpClient())
+            {
+                bool res = false;
+                client.BaseAddress = new Uri("http://25.132.197.74:44444/api/Puja/InsertPuja/");
+                var respuesta = client.GetAsync(string.Format("?idu={0}&ids={1}&p={2}", u.Id, sub.Id, precio));
                 respuesta.Wait();
 
                 var response = respuesta.Result;

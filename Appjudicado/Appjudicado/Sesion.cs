@@ -57,15 +57,20 @@ namespace Appjudicado
 
         public static void eliminarUsuario(Usuario user)
         {
-            ConexionApi.start();
-            bool res = ConexionApi.eliminarUsuario(user);
-            if (res)
+            DialogResult r = MessageBox.Show("Estás seguro que quieres eliminarlo?", "Confirmar borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (r==DialogResult.Yes)
             {
-                MessageBox.Show("Se ha eliminado correctamente");
-                Main.panel.Hide();
-            }
-            else {
-                MessageBox.Show("Hemos tenido un fallo al eliminar");
+                ConexionApi.start();
+                bool res = ConexionApi.eliminarUsuario(user);
+                if (res)
+                {
+                    MessageBox.Show("Se ha eliminado correctamente");
+                    Main.panel.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Hemos tenido un fallo al eliminar");
+                }
             }
         }
 
@@ -81,6 +86,74 @@ namespace Appjudicado
             else
             {
                 MessageBox.Show("Hemos tenido un fallo al cambiar la contraseña");
+            }
+        }
+
+        public static void insertarSubasta (string a, string c, string d, string i, float p, DateTime dti, DateTime dtf)
+        {
+            ConexionApi.start();
+            bool res = ConexionApi.insertarSubasta(a, c, d, i, p, dti, dtf);
+            if (res)
+            {
+                MessageBox.Show("Se ha creado la subasta correctamente");
+                Main.panel.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Hemos tenido un fallo crear la subasta");
+            }
+        }
+
+        public static void editarSubasta(Subasta sub, string a, string c, string d, string i, float p, DateTime dti, DateTime dtf)
+        {
+            ConexionApi.start();
+            bool res = ConexionApi.editarSubasta(sub, a, c, d, i, p, dti, dtf);
+            if (res)
+            {
+                MessageBox.Show("Se ha modificado la subasta correctamente");
+                Main.panel.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Hemos tenido un fallo modificar la subasta");
+            }
+        }
+
+        public static void eliminarSubasta (Subasta sub)
+        {
+            DialogResult r = MessageBox.Show("Estás seguro que quieres eliminarlo?", "Confirmar borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (r == DialogResult.Yes)
+            {
+                ConexionApi.start();
+                bool res = ConexionApi.eliminarSubasta(sub);
+                if (res)
+                {
+                    MessageBox.Show("Se ha eliminado correctamente");
+                    Main.panel.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Hemos tenido un fallo al eliminar");
+                }
+            }
+        }
+
+        public static void pujarSubasta (Subasta sub, float precio)
+        {
+            DialogResult r = MessageBox.Show("Estás seguro que quieres pujar?", "Confirmar puja", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (r == DialogResult.Yes)
+            {
+                ConexionApi.start();
+                bool res = ConexionApi.pujarSubasta(sub, Sesion.logged, precio);
+                if (res)
+                {
+                    MessageBox.Show("Se ha realizado la puja");
+                    Main.panel.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Hemos tenido un fallo en la puja");
+                }
             }
         }
 
@@ -180,7 +253,7 @@ namespace Appjudicado
         public static void misPujas()    // FUNCION QUE LLAMA EL BOTON "MIS PUJAS" del main.cs - BOTONES
         {
             ConexionApi.start();
-            ConexionApi.misSubastas(logged.Id);
+            ConexionApi.misPujas(logged.Id);
             listadoSubastas = new List<Subasta>();
             foreach (Subasta s in ConexionApi.subastas)
             {
@@ -192,7 +265,7 @@ namespace Appjudicado
             }
             for (int i = 0; i < listadoSubastas.Count(); i++)
             {
-                ListadoSubastas userControl = new ListadoSubastas(listadoSubastas[i], 2);
+                ListadoSubastas userControl = new ListadoSubastas(listadoSubastas[i], 1);
                 Main.panel.Controls.Add(userControl);
             }
             Main.panel.Show();
