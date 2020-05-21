@@ -35,6 +35,7 @@
             this.bMisSubastas = new System.Windows.Forms.Button();
             this.panelDeControl = new System.Windows.Forms.FlowLayoutPanel();
             this.bMisPujas = new System.Windows.Forms.Button();
+            this.bActualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bCrear
@@ -98,7 +99,7 @@
             this.panelDeControl.AutoScroll = true;
             this.panelDeControl.Location = new System.Drawing.Point(120, 5);
             this.panelDeControl.Name = "panelDeControl";
-            this.panelDeControl.Size = new System.Drawing.Size(680, 450);
+            this.panelDeControl.Size = new System.Drawing.Size(710, 459);
             this.panelDeControl.TabIndex = 6;
             // 
             // bMisPujas
@@ -112,11 +113,23 @@
             this.bMisPujas.UseVisualStyleBackColor = true;
             this.bMisPujas.Click += new System.EventHandler(this.bMisPujas_Click);
             // 
+            // bActualizar
+            // 
+            this.bActualizar.Location = new System.Drawing.Point(12, 441);
+            this.bActualizar.Name = "bActualizar";
+            this.bActualizar.Size = new System.Drawing.Size(99, 23);
+            this.bActualizar.TabIndex = 8;
+            this.bActualizar.Text = "Actualizar";
+            this.bActualizar.UseVisualStyleBackColor = true;
+            this.bActualizar.Visible = false;
+            this.bActualizar.Click += new System.EventHandler(this.bActualizar_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 461);
+            this.ClientSize = new System.Drawing.Size(834, 471);
+            this.Controls.Add(this.bActualizar);
             this.Controls.Add(this.bMisPujas);
             this.Controls.Add(this.panelDeControl);
             this.Controls.Add(this.bMisSubastas);
@@ -140,6 +153,7 @@
         private System.Windows.Forms.Button bMisSubastas;
         private System.Windows.Forms.FlowLayoutPanel panelDeControl;
         private System.Windows.Forms.Button bMisPujas;
+        private System.Windows.Forms.Button bActualizar;
     }
 }
 

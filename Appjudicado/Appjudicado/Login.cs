@@ -30,6 +30,7 @@ namespace Appjudicado
                 if (Sesion.logged.Rol == 1)
                 {
                     Main.botonAdm.Show();
+                    Main.botonActualizar.Show();
                 }
                 principal.Show();
             }

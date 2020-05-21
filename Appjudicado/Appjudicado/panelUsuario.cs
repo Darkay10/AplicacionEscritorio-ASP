@@ -128,8 +128,8 @@ namespace Appjudicado
             textbox_codigo_postal.Text = user.Cp;
             textbox_localidad.Text = user.Localidad;
             textbox_pais.Text = user.Pais;
-            //if (user.Rol == 1)
-                //cbAdmin.
+            if (user.Rol == 1)
+                cbAdmin.Checked = true;
         }
 
         private void modoLectura()

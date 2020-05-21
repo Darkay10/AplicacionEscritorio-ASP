@@ -13,13 +13,22 @@ namespace Appjudicado
     public partial class Main : Form
     {
         public static Button botonAdm;
+        public static Button botonActualizar;
         public static FlowLayoutPanel panel;
+
+        /*  
+         * LAS COMPROBACIONES QUE SE HAN DE HACER SON: CAMPOS VACIOS, CAMPOS QUE SEAN FLOAT, 
+         * QUE LA FECHA DE INICIO NO VAYA MAS TARDE QUE LA FINAL, QUE LA IMAGEN SE PUEDE COLOCAR, 
+         * EN VEZ DE INPUT QUE SE PUEDA SELECCIONAR IMAGEN O SUBIR UNA FOTO
+         */
+
         public Main()
         {
             InitializeComponent();
             ConexionApi.start();
             botonAdm = bAdmin;
             panel = panelDeControl;
+            botonActualizar = bActualizar;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -60,6 +69,12 @@ namespace Appjudicado
         private void bMisPujas_Click(object sender, EventArgs e)    // Muestra un listado en el que podremos ver las subastas en las que hemos pujado
         {
             Sesion.misPujas();  
+        }
+
+        private void bActualizar_Click(object sender, EventArgs e)
+        {
+            // EL BOTON ACTUALIZAR - Comprueba si una subasta ya ha pasado de plazo - Trocea la fecha actual y comprueba si el año, el mes y el dia
+            //Sesion.actualizarSubastas();
         }
     }
 }
